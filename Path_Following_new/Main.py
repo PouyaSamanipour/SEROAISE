@@ -27,7 +27,7 @@ if __name__=='__main__':
         bound=[(-3.0,3.0),(-3.0,3.0)]
         TH=np.array([3.0,3.0])
         # plot_polytope_2D(NN_file,TH)
-        alpha=[0.02]
+        alpha=[0.009]
         X=[]
         Y=[]
         Z=[]
@@ -49,9 +49,9 @@ if __name__=='__main__':
 
         ax.contour(X[0],Y[0],Z_new,levels=[0],colors='red',linestyles='solid')
         plt.legend([plt.Rectangle((0,0),1,2,color='r',fill=False,linewidth = 2,linestyle='-'),plt.Rectangle((0,0),1,2,color='black',fill=False,linewidth = 2),plt.Rectangle((0,0),1,2,color='green',fill=False,linewidth = 2,linestyle='-'),plt.Rectangle((0,0),1,2,color='yellow',fill=False,linewidth = 2,linestyle='-')]\
-           ,["Iteration 1","iteration 2","Iteration 3","Iteration 4"],loc='upper right',fontsize=14)
-        plt.xlabel('$x_1$')
-        plt.ylabel('$x_2$')
+           ,["Iteration 1","Iteration 2","Iteration 3"],loc='lower center', bbox_to_anchor=(0.5, -0.15), ncol=4, frameon=True)
+        plt.xlabel('Distance error')
+        plt.ylabel('Angle error')
         alpha_p=alpha
         colors=['black','green','yellow','brown']
         iteration=2

@@ -102,7 +102,7 @@ def Refinement(enumerate_poly,all_hyperplanes,all_bias,slack_var,sol,W,c,eps,D,b
                 all_bias_new=np.vstack((all_bias_new,b_new,-b_new))
     if np.max(tau_agis)>=eps:
         for i in range(len(tau_agis)):
-            if slack_var[i]>=eps:
+            if tau_agis[i]>=eps:
                 reg=AGIS_region[i]
                 for j in reg:
                     x_dot=np.dot(W,np.maximum(np.dot(all_hyperplanes,np.array(enumerate_poly[j]).T)+all_bias,0))+c

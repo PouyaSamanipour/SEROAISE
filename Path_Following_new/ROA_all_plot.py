@@ -211,7 +211,7 @@ TH=np.array([3.0,3.0])
 plot_invariant_set_single(h,TH,zeros1,color='r')
 # plot_heatmap(h,TH,zeros1)
 NN_file="NN_files/model_Dai.pt"
-plot_polytope_2D(NN_file,TH)
+# plot_polytope_2D(NN_file,TH)
 # plt.gca().add_patch(rect)
 plt.xlabel('Distance Error')
 plt.ylabel('Angle Error')

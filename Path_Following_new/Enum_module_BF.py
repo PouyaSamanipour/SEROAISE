@@ -126,7 +126,7 @@ def Finding_Barrier(NN_file,name_fig,eps1,eps2,TH,mode,parallel,alph,bound):
         slack_var=sol[n_h+1:-1]
         status=checking_sloution(slack_var,eps1)
 
-        if not status and iter>0:
+        if (not status) and (iter>0):
             end_process=time.time()
             print("Accumulative enumeration time=\n",enumeration_time)
             print("Number of hyperplanes:\n",n_h)

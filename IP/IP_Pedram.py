@@ -20,7 +20,8 @@ parallel=False
 # from memory_profiler import profile
 if __name__=='__main__':
     with cProfile.Profile() as pr:
-        NN_file="NN_files/model_2d_IP_8.pt"
+        # NN_file="NN_files/model_2d_IP_8.pt"
+        NN_file="NN_files/model_IP_Pedram_n copy 2.pt"
         # NN_file="NN_files/Inverted_Penduluem20.xlsx"
         # NN_file="NN_files/model_2d_simple_3.pt"
         # NN_file="NN_files/Path_following_20.xlsx"
@@ -37,7 +38,9 @@ if __name__=='__main__':
             return (random.random(), random.random(), random.random())
         bound=[(-3.14,3.14),(-3.14,3.14)]
         TH=np.array([3.14,3.14])
-        alpha=[0.04]
+        
+        # plot_polytope_2D(NN_file,TH)
+        alpha=[0.1]
         X=[]
         Y=[]
         Z=[]
@@ -64,7 +67,7 @@ if __name__=='__main__':
         plt.ylabel('$x_2$')
         alpha_p=alpha
         colors=['black','green','yellow','brown']
-        iteration=3
+        iteration=1
         for iter in range(iteration):
             alpha[0]=alpha[0]-0.1*alpha[0]
             NN,h,all_hyperplanes,all_bias,W_x,c_x,enumerate_poly ,D ,border_hype,border_bias,W_h,c_h=SISE_algorithm(NN,h,enumerate_poly,D,all_hyperplanes,all_bias,W_h,c_h,W_x,c_x,TH,border_hype,border_bias,zeros,eps1,eps2,alpha,parallel,NN_file,iter,bound)

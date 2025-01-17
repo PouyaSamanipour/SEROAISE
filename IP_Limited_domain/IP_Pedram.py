@@ -20,7 +20,7 @@ parallel=False
 # from memory_profiler import profile
 if __name__=='__main__':
     with cProfile.Profile() as pr:
-        NN_file="NN_files/model_2d_IP_8.pt"
+        NN_file="NN_files/model_IP_Pedram_n.pt"
         # NN_file="NN_files/Inverted_Penduluem20.xlsx"
         # NN_file="NN_files/model_2d_simple_5.pt"
         # NN_file="NN_files/Path_following_20.xlsx"
@@ -29,7 +29,7 @@ if __name__=='__main__':
         eps2=0.01
         name="IP_Lyap"
         TH=3.14
-        V=Finding_Lyapunov_function(NN_file,name,eps1,eps2,TH,mode,parallel)
+        # V=Finding_Lyapunov_function(NN_file,name,eps1,eps2,TH,mode,parallel)
         eps1=0.01
         eps2=0.01
         name="IP_BF"
@@ -40,6 +40,7 @@ if __name__=='__main__':
         # alpha=[0.0009,0.001,0.0028,0.0025,0.003,0.004,0.005,0.01,0.05,0.08,0.2,0.3]
         # alpha=[0.0025,0.003,0.0035,0.0038,0.004,0.005,0.01,0.05,0.08,0.2,0.3]
         alpha=[0.005]
+        plot_polytope_2D(NN_file,TH)
         X=[]
         Y=[]
         Z=[]

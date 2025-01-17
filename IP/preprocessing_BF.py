@@ -46,7 +46,7 @@ def preprocessing_BF(enumerate_poly,D,W,c,hyperplanes,b,eps1,eps2,TH,alpha):
                 id=np.where(boundary_regions==index_list[j])[0][0]
                 eq=h-x[n_h+1+id]
                 m.addConstr(eq[0][0]<=-eps1,name=f"NB")
-                m.addConstr(eq[0][0]>=-1000*eps1,name=f"NB")
+                # m.addConstr(eq[0][0]>=-1000*eps1,name=f"NB")
                 # if i@xdot>1e-8:
                 #     id=np.where(boundary_regions==index_list[j])[0][0]
                 #     eq=h-x[n_h+1+id]
