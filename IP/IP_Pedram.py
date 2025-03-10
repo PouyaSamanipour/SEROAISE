@@ -20,8 +20,8 @@ parallel=False
 # from memory_profiler import profile
 if __name__=='__main__':
     with cProfile.Profile() as pr:
-        # NN_file="NN_files/model_2d_IP_8.pt"
-        NN_file="NN_files/model_IP_Pedram_n copy 2.pt"
+        NN_file="NN_files/model_2d_IP_8.pt"
+        # NN_file="NN_files/model_IP_Pedram_n copy 2.pt"
         # NN_file="NN_files/Inverted_Penduluem20.xlsx"
         # NN_file="NN_files/model_2d_simple_3.pt"
         # NN_file="NN_files/Path_following_20.xlsx"
@@ -40,7 +40,7 @@ if __name__=='__main__':
         TH=np.array([3.14,3.14])
         
         # plot_polytope_2D(NN_file,TH)
-        alpha=[0.1]
+        alpha=[0.04]
         X=[]
         Y=[]
         Z=[]
@@ -62,12 +62,12 @@ if __name__=='__main__':
 
         ax.contour(X[0],Y[0],Z_new,levels=[0],colors='red',linestyles='solid')
         plt.legend([plt.Rectangle((0,0),1,2,color='r',fill=False,linewidth = 2,linestyle='-'),plt.Rectangle((0,0),1,2,color='black',fill=False,linewidth = 2),plt.Rectangle((0,0),1,2,color='green',fill=False,linewidth = 2,linestyle='-'),plt.Rectangle((0,0),1,2,color='yellow',fill=False,linewidth = 2,linestyle='-')]\
-           ,["Iteration 1","iteration 2","Iteration 3","Iteration 4"],loc='upper right',fontsize=14)
+           ,["Invariant set[23]","Iteration 1","Iteration 2","Iteration 3"],loc='upper right',fontsize=14)
         plt.xlabel('$x_1$')
         plt.ylabel('$x_2$')
         alpha_p=alpha
         colors=['black','green','yellow','brown']
-        iteration=1
+        iteration=3
         for iter in range(iteration):
             alpha[0]=alpha[0]-0.1*alpha[0]
             NN,h,all_hyperplanes,all_bias,W_x,c_x,enumerate_poly ,D ,border_hype,border_bias,W_h,c_h=SISE_algorithm(NN,h,enumerate_poly,D,all_hyperplanes,all_bias,W_h,c_h,W_x,c_x,TH,border_hype,border_bias,zeros,eps1,eps2,alpha,parallel,NN_file,iter,bound)

@@ -50,7 +50,7 @@ if __name__=='__main__':
 
         ax.contour(X[0],Y[0],Z_new,levels=[0],colors='red',linestyles='solid')
         plt.legend([plt.Rectangle((0,0),1,2,color='r',fill=False,linewidth = 2,linestyle='-'),plt.Rectangle((0,0),1,2,color='black',fill=False,linewidth = 2),plt.Rectangle((0,0),1,2,color='green',fill=False,linewidth = 2,linestyle='-'),plt.Rectangle((0,0),1,2,color='yellow',fill=False,linewidth = 2,linestyle='-')]\
-           ,["Iteration 1","Iteration 2","Iteration 3","Iteration 4"],loc='lower center', bbox_to_anchor=(0.5, -0.15), ncol=4, frameon=True)
+           ,["Invariant Set[23]","Iteration 1","Iteration 2","Iteration 3"],loc='lower center',fontsize=18, bbox_to_anchor=(0.5, -0.15), ncol=4, frameon=True)
         plt.xlabel('$\\theta(rad)$')
         plt.ylabel('$\\dot{\\theta}(rad/s)$')
         alpha_p=alpha

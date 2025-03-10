@@ -1274,3 +1274,28 @@ def finding_intersections(sides,hyperplane_val,n,hyp_f,hyperplanes,b,TH,parallel
     #     print("check")
     # print("Duraion1:",time.time()-st)
     return intersections_test
+
+
+@njit
+def Finding_Indicator_mat(enumerate_poly,all_hyperplanes,all_bias):
+    Mid_points=np.zeros((len(enumerate_poly),len(all_hyperplanes[0])))
+    indx=0
+    for i in enumerate_poly:
+        sum=np.sum(i,axis=0)
+        # sum=np.zeros(len(all_hyperplanes[0]))
+        # for j in i:
+            # sum=sum+j
+        Mid_points[indx]=(sum/len(i))
+        indx=indx+1
+    # Mid_points=[np.mean(i,axis=0) for i in enumerate_poly]
+    D_raw=(np.dot(all_hyperplanes,Mid_points.T)+all_bias).T
+    return D_raw
+
+def checking_sloution(slack,eps):
+    if np.max(slack)>=eps:
+        status=True
+        print("max salck is:",np.max(slack))
+        print("refinement is required")
+    else:
+        status=False
+    return status

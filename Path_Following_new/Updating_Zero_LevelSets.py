@@ -251,8 +251,8 @@ def finding_all_info(index_list,V,points,hyperplanes,biases,W_h,D,c_h,TH):
         vertex=np.reshape(np.copy(i),(1,len(i)))
         h=(W_h@np.diag(D[index_list[j]])@(hyperplanes@vertex.T+biases)+c_h)
         h_new=W_h@np.maximum(hyperplanes@vertex.T+biases,0)+c_h
-        if h-h_new>1e-5:
-            print("check")
+        # if h-h_new>1e-5:
+        #     print("check")
         if np.any(TH-i>=-1e-6) or np.any(i+TH>=-1e-6):
             # boundary_points.append(i)
             b_reg.append(index_list[j])

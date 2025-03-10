@@ -234,7 +234,7 @@ plt.title('Inverted Pendulum')
 # Lyap_model=Model_org.lyapunov
 # plot_level_set(Lyap_model,TH,'brown',[1])
 plt.legend([plt.Rectangle((0,0),1,2,color='g',fill=False,linewidth = 2,linestyle='-'),plt.Rectangle((0,0),1,2,color='orange',fill=False,linewidth = 2),plt.Rectangle((0,0),1,2,color='red',fill=False,linewidth = 2,linestyle='-')]\
-           ,["DITL","Lyapunov-Stable","Ours"],loc='lower center',fontsize=14, bbox_to_anchor=(0.5, -0.2), ncol=3, frameon=True)
+           ,["DITL","Lyapunov-Stable","Ours"],loc='lower center',fontsize=18, bbox_to_anchor=(0.5, -0.2), ncol=3, frameon=True)
 # plt.legend([plt.Rectangle((0,0),1,2,color='g',fill=False,linewidth = 1.5),plt.Rectangle((0,0),1,2,color='m',fill=False,linewidth = 1.5),\
 #             plt.Rectangle((0,0),1,2,color='tab:purple',fill=False,linewidth = 1.5),plt.Rectangle((0,0),1,2,color='k',fill=False,linewidth = 1.5),\
 #             plt.Rectangle((0,0),1,2,color='b',fill=False,linewidth = 1.5),rect],['Our Approach','NLC','UNL','SOS', 'LQR', 'Valid Region'], \
