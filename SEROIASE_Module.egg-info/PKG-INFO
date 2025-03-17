@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: SEROIASE_Module
+Version: 0.1
+Summary: Sequesntial Estimation of ROA using invainrt set estimation
+Home-page: https://github.com/PouyaSamanipour/SEROAISE.git
+Author: Pouya Samanipour
+Author-email: psa254@uky.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: torch
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: pycddlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# SISE(Sequential Invariant Set Estimator)
+In this repo, a new approach to obtain a larger invariant set using PWA functions is presented.
