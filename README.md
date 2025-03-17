@@ -11,7 +11,20 @@ This repository implements a novel framework for constructing the Region of Attr
 A key aspect is the **Non-Uniform Growth of Invariant Set (NUGIS)**, which allows the generation of systematically larger certified invariant sets compared to state-of-the-art approaches. Several examples in this repository illustrate the method’s effectiveness, including applications to dynamical systems derived from learning algorithms.
 
 ---
+## **Installation and Requirements**
 
+### **1. Clone the Repository**
+```bash
+git clone https://github.com/PouyaSamanipour/SEROAISE.git
+cd SEROIASE
+```
+
+### **2. Set Up a Python Virtual Environment**
+Create a virtual environment to avoid conflicts with system-wide packages:
+```bash
+python -m venv seroaise_env
+seroaise_env\Scripts\activate
+```
 ## Requirements & Dependencies
 
 This project depends on the following Python packages:
