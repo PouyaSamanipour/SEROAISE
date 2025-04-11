@@ -19,14 +19,14 @@ parallel=False
 if __name__=='__main__':
     with cProfile.Profile() as pr:
         NN_file="NN_files/model_Dai.pt"
-        NN_Dai="NN_files/model_org_Dai.pt"
-        Model_org=torch.jit.load(NN_Dai)
-        Model_org.eval()
-        Lyap_model=Model_org.lyapunov
+        # NN_Dai="NN_files/model_org_Dai.pt"
+        # Model_org=torch.jit.load(NN_Dai)
+        # Model_org.eval()
+        # Lyap_model=Model_org.lyapunov
 
         eps1=1e-02
         eps2=1e-04
-        name="IP_BF"
+        name="PF"
         def random_color():
             return (random.random(), random.random(), random.random())
         bound=[(-3.0,3.0),(-3.0,3.0)]
@@ -77,7 +77,7 @@ if __name__=='__main__':
         # Y.append(y)
         # Z.append(z)
         # ax.contour(X[1],Y[1],Z[1],levels=[0],colors='red',linestyles='solid')
-        plot_heatmap(h,TH,zeros,"Path_following.png")
+        out_test=plot_heatmap(h,TH,zeros,"Path_following.png")
         plt.show()
 
         # x,y,z=plot_invariant_set(h_n,[],TH,alph,color=[random_color()])

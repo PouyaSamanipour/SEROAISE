@@ -8,8 +8,8 @@ import csv
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 import time
-from utils_n_old import Finding_Indicator_mat
-from utils_n_old import checking_sloution
+from .utils_n_old import Finding_Indicator_mat
+from .utils_n_old import checking_sloution
 from numba import prange
 from .utils_Enumeration import Enumerator_rapid
 from .preprocessing_BF import preprocessing_BF
@@ -23,7 +23,7 @@ import torch.nn.functional as F
 from .Refinement_process_Lyap import Refinement_Lyap
 from .plot_res_Lyap import plotting_results_lyap,plot_invariant_set_multiple,plot_level_set,plot_polytope_2D,plot_polytope
 from .Preprocessing_Lyap_test import preprocessing_Lyap_test
-import preprocessing_BF_new
+from .preprocessing_BF_new import *
 
 def Finding_Barrier(NN_file,name_fig,eps1,eps2,TH,mode,parallel,alph,bound):
     if NN_file[-4:]=="xlsx":

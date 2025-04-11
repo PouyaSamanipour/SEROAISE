@@ -3,15 +3,12 @@ import numpy as np
 # from numba.typed import List
 import random
 from SEROIASE_Module import Finding_Barrier
-# from preprocessing_LF import preprocessing_Lyap
-# from utils_n_old import checking_sloution
 import time
 from SEROIASE_Module.plot_res_Lyap import plot_invariant_set_multiple,plot_polytope_2D,plot_polytope,plot_invariant_set_single,plot_heatmap
 import matplotlib.pyplot as plt
 import time
 import torch
 from SEROIASE_Module.SISE_Algorithm import SISE_algorithm
-# from Optimization_SISE import SIS_opt
 mode="Rapid_mode" 
 parallel=False
 # mode="Low_Ram"
@@ -83,43 +80,8 @@ if __name__=='__main__':
         # Y.append(y)
         # Z.append(z)
         # ax.contour(X[1],Y[1],Z[1],levels=[0],colors='red',linestyles='solid')
-        plot_heatmap(h,TH,zeros)
+        out_test=plot_heatmap(h,TH,zeros,name)
         plt.show()
-
-        # x,y,z=plot_invariant_set(h_n,[],TH,alph,color=[random_color()])
-        # X.append(x)
-        # Y.append(y)
-        # Z.append(z)
-        # CS=ax.contour(X[0],Y[0],Z[alpha.index(alph)],levels=[0],colors=[random_color()],linestyles=':')
-        # plt.clabel(CS, inline=True, fmt={0: fr'$\alpha={alph:.3f}$'}, fontsize=8) 
-        # ax.contour(X[0],Y[0],Z[1],levels=[0],colors='red',linestyles='solid')
-        # plt.legend([plt.Rectangle((0,0),1,2,color='r',fill=False,linewidth = 2,linestyle='solid')]\
-        #    ,[fr'UIS Invariant Set'],loc='upper right',fontsize=14)
-        # plt.plot(points[:,0].detach().cpu().numpy(),points[:,1].detach().cpu().numpy(),'ro')
-        # plot_polytope(enumerate_poly, name)
-        # plt.show()
-
-        # h_sol=np.hstack((all_hype,all_b.reshape((len(all_b),1))))
-        # h_sol=h_sol.reshape(-1)
-        # Refined_polytope,A_new,B_new=finding_PWA_Invariat_set(h_sol,Refined_polytope,A_dyn,B_dyn,2)
-        # # plot_invariant_set(h,TH,'cyan')
-        # # plot_polytope(Refined_polytope, name)
-        # eps1=0.01
-        # eps2=0.01
-        # name="IP_BF_Lyap"
-        # TH=3.14
-        # n=2
-        # # V_lyp1,A_lyap1,H_lyap1,sol_Lyap1,A_PD2,id_var2=finding_Lyapunov(Refined_polytope,A_new,n,B_new,eps1,eps2,Threshold=0.099)
-
-        # V_final,_,_,_,_,_,_,_,_=Finding_Lyap_Invariant(NN_file,h,Refined_polytope,all_hyperplanes,all_bias,border_hype,border_bias,new_hype,new_bias,W,c,eps1,eps2,TH,parallel)
-
-        # # plot_level_set(V,TH,'green',[20])
-        # # min_val,max_val,ls,sol_n2,list_points,levset_pts=Lyap_PostProcess.sol_Process(sol_Lyap1,A_PD2,id_var2,n,V_lyp1,len(V_lyp1))
-        # # plot2d(A_lyap1,sol_n2,len(V_lyp1),H_lyap1,1,list_points,levset_pts,V_lyp1,'red',"level set after finding the safe set")
-        # plot_level_set(V_final,TH,'red',[1,2,2.5,3])
-        # plot_invariant_set(h,TH,'cyan')
-        # plt.show()
-
 
 
 

@@ -11,6 +11,7 @@ SEROIASE_Module/Refinement_process_Lyap.py
 SEROIASE_Module/SISE_Algorithm.py
 SEROIASE_Module/Updating_Zero_LevelSets.py
 SEROIASE_Module/__init__.py
+SEROIASE_Module/plot_res_BF.py
 SEROIASE_Module/plot_res_Lyap.py
 SEROIASE_Module/preprocessing_BF.py
 SEROIASE_Module/preprocessing_BF_new.py

@@ -1,13 +1,13 @@
 import numpy as np
 import torch
-from Enum_module_BF import updating_NN
-from utils_n_old import finding_side
+from .Enum_module_BF import updating_NN
+from .utils_n_old import finding_side
 from numba import njit
-from plot_res_Lyap import plot_polytope,plot_invariant_set_single,plot_hype
+from .plot_res_Lyap import plot_polytope,plot_invariant_set_single,plot_hype
 from matplotlib import pyplot as plt
 from scipy.sparse import csr_matrix
-from utils_n_old import Intersection_polytope_hype
-from Optimization_SISE_test import finding_similar_vertex_with_index
+from .utils_n_old import Intersection_polytope_hype
+from .Optimization_SISE_test import finding_similar_vertex_with_index
 
 
 def updating_BF_LV(NN,h,enumerate_poly,D,all_hyperplanes,all_bias,W_v,c_v,border_hype,border_b,TH):

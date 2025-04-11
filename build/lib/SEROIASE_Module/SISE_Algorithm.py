@@ -1,18 +1,18 @@
-from Optimization_SISE_test import check_sol_AGIS
-from Updating_Zero_LevelSets import updating_BF_LV,finding_boundary_vertice,updating_BF_LV_n,polishing_regions,cells_ordering,finding_all_info
+from .Optimization_SISE_test import check_sol_AGIS
+from .Updating_Zero_LevelSets import updating_BF_LV,finding_boundary_vertice,updating_BF_LV_n,polishing_regions,cells_ordering,finding_all_info
 import numpy as np
 from numba.typed import List
-from utils_Enumeration import Enumerator_rapid
-from utils_n_old import Finding_Indicator_mat
-from Enum_module_BF import Finding_Barrier, Finding_Lyap_Invariant,updating_NN,updating_NN_Original
-from Optimization_SISE_test import SIS_opt,SIS_opt_new
-from Refinement_SISE import Refinement
+from .utils_Enumeration import Enumerator_rapid
+from .utils_n_old import Finding_Indicator_mat
+from .Enum_module_BF import Finding_Barrier, Finding_Lyap_Invariant,updating_NN,updating_NN_Original
+from .Optimization_SISE_test import SIS_opt,SIS_opt_new
+from .Refinement_SISE import Refinement
 import pandas as pd
 import torch
 import time
 import os
 import csv
-from Enum_module_BF import generate_hypercube_vertices
+from .Enum_module_BF import generate_hypercube_vertices
 def SISE_algorithm(NN,h,enumerate_poly,D,all_hyperplanes,all_bias,W_h,c_h,W_x,c_x,TH,border_hype,border_bias,zeros,eps1,eps2,alpha,parallel,NN_file,iter,bound):
     # enumerate_poly,all_hyperplanes_x,all_bias_x,W_x,c_x,border_hype,border_bias,D_x=initial_Enum(NN_file_original,TH,mode,parallel)
     state=True
